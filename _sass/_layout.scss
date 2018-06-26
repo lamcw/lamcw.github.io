@@ -1,0 +1,184 @@
+body {
+	background-color: $bg;
+	color: $font-color;
+	font-family: $font-style;
+	font-size: 16px;
+	letter-spacing: -0.1px;
+	line-height: 1.5;
+
+	width: 100%;
+	max-width: 720px;
+	margin: 0 auto;
+
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	scroll-behavior: smooth;
+	text-rendering: geometricPrecision;
+
+	font-kerning: normal;
+	-moz-font-feature-settings:"kern" 1, "liga" 1, "zero" 1, "calt" 1;
+	-ms-font-feature-settings:"kern" 1, "liga" 1, "zero" 1, "calt" 1;
+	-o-font-feature-settings:"kern" 1, "liga" 1, "zero" 1, "calt" 1;
+	-webkit-font-feature-settings:"kern" 1, "liga" 1, "zero" 1, "calt" 1;
+	font-feature-settings:"kern" 1, "liga" 1, "zero" 1, "calt" 1;
+}
+
+// headings
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-style;
+	font-weight: 500;
+	margin: 1.618em 0 0.7em 0;
+}
+
+h1 {
+	font-size: 32px;
+	letter-spacing: -0.02em;
+
+	span.post-author {
+		@extend h3;
+		margin: 0 0.5em;
+		opacity: 0.5;
+	}
+}
+
+h2 {
+	font-size: 26px;
+	letter-spacing: -0.012em;
+}
+
+h3 {
+	font-size: 22px;
+	letter-spacing: 0;
+	line-height: -0.5px;
+}
+
+h4, h5, h6 {
+	font-size: 18px;
+	margin: 1em 0 -0.2em 0;
+	letter-spacing: 0.01em;
+}
+
+hr {
+	margin: 1em 0;
+	height: 1px;
+	border: none;
+	background-color: $dark;
+}
+
+img {
+	border: none;
+	vertical-align: bottom;
+}
+
+code, pre, tt {
+	font-family: $mono-font-style;
+	font-size: 0.93em;
+}
+
+article.content {
+	margin: 0px 32px;
+	word-wrap: break-word;
+
+	h3.category-post-title {
+		display: inline-block;
+		font-weight: 400;
+		margin: 0.5em 0;
+	}
+
+	p, ul, ol, pre, blockquote, hr {
+		margin: 1em 0;
+	}
+
+	a,
+	a:visited {
+		color: $anchor-color;
+		text-decoration: none;
+		padding-bottom: 0.025em;
+	}
+
+	a:hover {
+		text-decoration: underline $anchor_hover_color;
+	}
+
+	li {
+		margin-left: 2em;
+		margin-bottom: 0.2em;
+	}
+
+	ul > li {
+		margin-left: 1.4em;
+	}
+
+	ul.minimal {
+		list-style: none;
+	}
+
+	ul.minimal > li {
+		margin-left: 0;
+
+		a,
+		a:visited {
+			color: $font-color;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: black;
+			text-decoration: none;
+		}
+	}
+
+	ul.minimal > li > div.post-categories a:hover {
+		text-decoration: underline;
+	}
+
+	img {
+		display: block;
+		max-width: 100%;
+		margin: 1em 0;
+	}
+
+	time {
+		display: inline-block;
+		opacity: 0.5;
+	}
+
+	div.post-readtime {
+		@extend time;
+	}
+
+	div.post-categories {
+		@extend time;
+		float: right;
+		opacity: 1;
+	}
+
+	div.footnotes {
+		border-top: 1px solid $dark;
+		opacity: 0.8;
+		margin: 3em 0px;
+	}
+
+	blockquote {
+		border-left: 4px solid $dark;
+		padding: 0 0 0 20px;
+		color: #777;
+		text-rendering: optimizeLegibility;
+	}
+
+	sup {
+		vertical-align: super;
+		font-size: 65%;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+footer {
+	margin: 32px 32px;
+	display: block;
+
+	p {
+		opacity: 0.7;
+	}
+}

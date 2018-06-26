@@ -1,0 +1,48 @@
+# Site settings
+title: Thomas Lam
+email: cw.lam@outlook.com
+description: >
+  Thomas Lam's personal website
+url: "https://lamcw.com"
+analytics_id: UA-93493353-1
+author: lamcw
+twitter:
+  username: lamcw
+  card: summary
+github_username: lamcw
+logo:
+  /assets/img/icon/favicon.ico
+social:
+  name: Thomas Lam
+  links:
+    - https://twitter.com/lamcw
+    - https://github.com/lamcw
+    - https://www.linkedin.com/in/thomaslamcw
+
+# Where things are
+collections:
+  posts:
+    output:   true
+sass:
+  sass_dir: _sass
+  style: compact
+include: ["_pages"]
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
+
+kramdown:
+  auto_ids:       true
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  input:          GFM
+  hard_wrap:      false
+  footnote_nr:    1
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jemoji
