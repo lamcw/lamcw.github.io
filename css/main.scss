@@ -1,10 +1,10 @@
 ---
 ---
 
-// font
-@import url('https://rsms.me/inter/inter-ui.css');
+@import "tachyons-sass/tachyons.scss";
 
 @import "base";
+@import "type";
 @import "layout";
-@import "header";
+@import "code";
 @import "syntax";

@@ -11,15 +11,14 @@ title: Categories
       {% capture category_name %}{{ category | first }}{% endcapture %}
       <div id="#{{ category_name | slugify }}"></div>
       <br />
-      <h2 class="category-head">#{{ category_name }}</h2>
+      <h4 class="fw5 mid-gray">#{{ category_name }}</h4>
       <a name="{{ category_name | slugify }}"></a>
-      <ul class="minimal">
-	{% for post in site.categories[category_name] %}
-	  <li>
-	    <h3 class="category-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-	    <time>{{ post.date | date_to_string }}</time>
-	  </li>
-	{% endfor %}
+      <ul class="list pl0">
+        {% for post in site.categories[category_name] %}
+          <li>
+            {% include post-meta.html post=post %}
+          </li>
+        {% endfor %}
       </ul>
     </div>
   {% endfor %}

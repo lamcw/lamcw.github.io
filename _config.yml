@@ -1,6 +1,6 @@
 # Site settings
 title: Thomas Lam
-email: cw.lam@outlook.com
+email: thomas@lamcw.com
 description: >
   Thomas Lam's personal website
 url: "https://lamcw.com"
@@ -25,13 +25,16 @@ collections:
     output:   true
 sass:
   sass_dir: _sass
-  style: compact
+  style: compressed
 include: ["_pages"]
 defaults:
   - scope:
       path: "assets/img"
     values:
       image: true
+
+paginate: 5
+paginate_path: "/archive/page:num/"
 
 kramdown:
   auto_ids:       true
@@ -42,7 +45,15 @@ kramdown:
   hard_wrap:      false
   footnote_nr:    1
 
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  blanklines: false
+  startings: [html, head, body]
+
 plugins:
+  - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-feed
   - jemoji

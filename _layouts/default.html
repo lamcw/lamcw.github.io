@@ -5,13 +5,16 @@ layout: compress
 <html>
   {% seo %}
   {% include head.html %}
-  <body>
+  <body class="w-100">
     {% include header.html %}
-    <main>
-      <article class="content">
-	{{ content }}
-      </article>
-      {% include footer.html %}
+    <main class="bt b--black-10">
+      <div class="w-100 ph3 ph5-ns pb3 pb4-ns">
+        <div class="mw7 center">
+          {{ content }}
+        </div>
+      </div>
     </main>
+    {% include footer.html %}
+    {% include js.html %}
   </body>
 </html>

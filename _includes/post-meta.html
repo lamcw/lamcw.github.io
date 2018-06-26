@@ -1,0 +1,36 @@
+{% if include.bigtitle %}
+  <h1 class="f2 f1-l lh-title">
+    {{ include.post.title }}
+    {% if include.show_author and include.post.author %}
+      <span class="gray f3-ns f4 fw5">
+        @{{ include.post.author }}
+      </span>
+    {% endif %}
+  </h1>
+{% else %}
+  <h2 class="f3 f2-ns lh-solid">
+    <a class="link dim black" href="{{ include.post.url | prepend: site.baseurl }}">
+      {{ include.post.title }}
+    </a>
+  </h2>
+{% endif %}
+
+<time class="dib gray" datetime="{{ include.post.date | date: "%F %T" }}">
+  {{ include.post.date | date_to_string }}
+</time>
+
+<div class="dib gray">
+  {% assign words = include.post.content | strip_html | number_of_words %}
+  &nbsp;&middot;&nbsp;{{ words | divided_by: 180 | plus: 1 }} min read
+</div>
+
+{% if include.post.categories %}
+  <div class="dib fr">
+    {% for category in include.post.categories %}
+      <a href="/categories/#{{ category | slugify }}">#{{ category }}</a>
+      {% comment %} print comma {% endcomment %}
+      {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  </div>
+{% endif %}
+

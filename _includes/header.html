@@ -1,14 +1,14 @@
-<header>
-  <h2><a href="{{ site.url }}">{{ site.title }}</a></h2>
-  <nav>
-    <ul>
+<header class="w-100 pa3 ph5-ns">
+  <div class="db dt-ns mw7 center w-100">
+    <div class="db dtc-ns v-mid tl w-50">
+      <a class="link f4 fw6 dim mid-gray" href="{{ site.url }}">{{ site.title }}</a>
+    </div>
+    <nav class="db dtc-ns v-mid tl tr-ns w-100 mt2 mt0-ns">
       {% for item in site.data.navigation %}
-	<li>
-	  <a href="{{ item.link }}" {% if item.link == page.url %}class="active"{% endif %} title="{{ item.title }}">
-	    {{ item.name }}
-	  </a>
-	</li>
+        <a class="f6 fw6 hover-blue mr2 mr3-m mr4-l link mid-gray dib" href="{{ item.link }}" title="{{ item.title }}">
+          {{ item.name }}
+        </a>
       {% endfor %}
-    </ul>
-  </nav>
+    </nav>
+  </div>
 </header>

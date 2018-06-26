@@ -1,23 +1,58 @@
-// colors
-$bg: #FFF;
-$dark: #DDD;
+// Base style
 
-// base font
-$font-style: 'Inter UI', sans-serif;
-$font-color: #444;
-$anchor-color: rgba(3, 102, 214, 1);
-$anchor-hover-color: rgba(3, 102, 214, 0.6);
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
 
-$mono-font-style: "SFMono-Regular", Menlo, Consolas, Inconsolata, monospace;
-*,
-*::before,
-*::after {
-	margin: 0;
-	padding: 0;
+body {
+  color: --var(--black-10);
+  background-color: var(--white);
 
-	font-family: inherit;
+  scroll-behavior: smooth;
+  text-rendering: geometricPrecision;
 
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+  font-kerning: normal;
+  font-feature-settings: "zero" 1, "tnum" 1, "case" 1;
+
+  word-wrap: break-word;
+}
+
+:lang(zh) {
+  font-family: 'Noto Serif TC', serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 1em 0;
+  border: none;
+  vertical-align: bottom;
+}
+
+sup {
+  font-feature-settings: "sups" 1;
+}
+
+sub {
+  font-feature-settings: "subs" 1;
+}
+
+main a {
+  @extend .link, .dim, .blue;
+}
+
+table {
+  @extend .collapse, .ba, .br2, .b--black-10, .pv2, .ph3;
+}
+
+tbody, thead {
+  @extend .striped--near-white;
+}
+
+th {
+  @extend .tr, .f6, .ttu, .fw6, .pv2, .ph3;
+}
+
+td {
+  @extend .pv2, .ph3;
 }

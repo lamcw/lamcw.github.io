@@ -1,0 +1,13 @@
+main {
+  // inline code
+  code.highlighter-rouge, tt {
+    @extend .highlight, .br2;
+    padding: 3px 5px;
+  }
+
+  // code block
+  pre {
+    @extend .ba, .br2, .b--black-30, .lh-title, .pa3;
+    overflow-x: auto;
+  }
+}
