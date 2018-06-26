@@ -216,7 +216,7 @@ article.content {
 	}
 
 	code.highlighter-rouge, tt {
-		@extend div.highlight;
+		@extend div, .highlight;
 		font-size: 0.93em;
 		padding: 3px 5px;
 	}
