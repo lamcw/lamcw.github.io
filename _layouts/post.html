@@ -1,10 +1,6 @@
 ---
 layout: default
 ---
-
-<!-- MathJax support -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
-
 <h1>{{ page.title }}<span class="post-author">{% if page.author %} @{{ page.author }}{% endif %}</span></h1>
 
 <time>{{ page.date | date_to_string }}</time>
@@ -25,3 +21,6 @@ layout: default
 {% endif %}
 
 {{ content }}
+
+<!-- MathJax support -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>

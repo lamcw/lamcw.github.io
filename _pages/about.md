@@ -6,10 +6,10 @@ permalink: /about/
 
 ## I am a...
 * Computer Science student
-* open-source advocate
+* open-source software advocate
 * Linux enthusiast
 * heavy [Neovim](https://neovim.io/) user, my setup is hosted on [Github](https://github.com/lamcw/dotfiles/tree/master/nvim)
-* dog lover(shiba💕)
+* dog lover(shiba <3)
 * casual basketball player
 * film photographer. Olympus OM-1 is my go-to camera
 

@@ -1,15 +1,4 @@
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  {% feed_meta %}
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics_id }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', '{{ site.analytics_id }}');
-  </script>
-
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,9 +17,9 @@
     <meta name="description" content="{{ site.description }}">
   {% endif %}
 
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | prepend: site.url }}">
-  <!-- font awesome -->
-  <link rel="alternate" type="application/rss+xml" title="Thomas Lam" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Thomas Lam" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
   <!-- icons -->
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icon/apple-touch-icon.png">
