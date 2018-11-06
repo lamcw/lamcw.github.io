@@ -3,7 +3,7 @@ layout: default
 ---
 
 <ul class="minimal">
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
     <li>
       <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
       <time>{{ post.date | date_to_string }}</time>
@@ -23,3 +23,22 @@ layout: default
     </li>
   {% endfor %}
 </ul>
+
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="button">
+      Previous
+    </a>
+  {% else %}
+    <span class="button disabled">Previous</span>
+  {% endif %}
+  <span class="page_number ">
+    Page: {{ paginator.page }} of {{ paginator.total_pages }}
+  </span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="button">Next</a>
+  {% else %}
+    <span class="button disabled">Next</span>
+  {% endif %}
+</div>
