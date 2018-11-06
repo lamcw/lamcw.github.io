@@ -14,34 +14,53 @@ This note demonstrates some of what [Markdown][1] is capable of doing.[^1]
 *Note: Feel free to play with this page.*
 
 ```c
+#ifndef TEST_H
+#define TEST_H
+
 #include <stdio.h>
 
+/* comment */
 int main(void)
 {
 	puts("Hello");
 	return 0;
 }
+
+#endif
 ```
 
 ```python
 import sys
+import os
 
+ENV = os.environ
+
+@dec
 def fun:
-	return 1
+    return 1
+
+
+class Foo(Bar):
+    def bar(self, x, y=None):
+        return x + y if y else x
 
 if __name__ == "__main__":
-	sys.exit(fun())
+    sys.exit(fun())
 ```
 
 Java test
 ```java
-class Car {
-	int a;
-	long b;
-	void Car(int a, long b) {
-		this.a = a;
-		this.b = b;
-	}
+class Foo {
+    int a;
+    long b;
+    void Car(int a, long b) {
+        this.a = a;
+        this.b = b;
+    }
+
+    void foo(Bar b) {
+        b.baz(this.b + 0.01 + 4);
+    }
 }
 ```
 ## Basic formatting
