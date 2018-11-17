@@ -27,18 +27,16 @@ layout: default
 <!-- Pagination links -->
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="button">
-      Previous
+    <a href="{{ paginator.previous_page_path }}">
+      <i class="inline-text material-icons">arrow_left</i>Previous
     </a>
-  {% else %}
-    <span class="button disabled">Previous</span>
   {% endif %}
   <span class="page_number ">
     Page: {{ paginator.page }} of {{ paginator.total_pages }}
   </span>
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="button">Next</a>
-  {% else %}
-    <span class="button disabled">Next</span>
+    <a href="{{ paginator.next_page_path }}">
+      Next<i class="inline-text material-icons">arrow_right</i>
+    </a>
   {% endif %}
 </div>
