@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}<span class="post-author">{% if page.author %} @{{ page.author }}{% endif %}</span></h1>
+<h1>{{ page.title }}{% if page.author %}<span class="post-author">@{{ page.author }}</span>{% endif %}</h1>
 
 <time>{{ page.date | date_to_string }}</time>
 
