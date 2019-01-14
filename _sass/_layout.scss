@@ -79,6 +79,10 @@ article.content {
 	margin: 0px 32px;
 	word-wrap: break-word;
 
+	:lang(zh) {
+		font-family: 'Noto Serif TC', serif;
+	}
+
 	h3.category-post-title {
 		display: inline-block;
 		font-weight: 400;
