@@ -24,4 +24,9 @@ layout: compress
 
     gtag('config', '{{ site.analytics_id }}');
   </script>
+
+  {% if page.mathjax %}
+    <!-- MathJax support -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+  {% endif %}
 </html>
