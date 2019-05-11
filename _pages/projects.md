@@ -12,9 +12,6 @@ and more. Deployed on AWS.
 ### [pylogic](https://github.com/lamcw/pylogic)
 Logic programming library for Python. **WIP**
 
-### [term-markdown-viewer](https://github.com/lamcw/term-markdown-viewer)
-Quickly view markdown file in terminal with minimal dependencies. **WIP**
-
 ### [dotfiles](https://github.com/lamcw/dotfiles)
 My configuration files for Arch Linux.
 
