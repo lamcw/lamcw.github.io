@@ -1,6 +1,6 @@
 # Site settings
 title: Thomas Lam
-email: cw.lam@outlook.com
+email: thomas@lamcw.com
 description: >
   Thomas Lam's personal website
 url: "https://lamcw.com"
@@ -25,7 +25,7 @@ collections:
     output:   true
 sass:
   sass_dir: _sass
-  style: compact
+  style: compressed
 include: ["_pages"]
 defaults:
   - scope:

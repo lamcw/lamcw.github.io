@@ -1,11 +1,10 @@
 ---
 ---
 
-// font
-@import url('https://rsms.me/inter/inter.css');
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC');
+@import "tachyons-sass/tachyons.scss";
 
 @import "base";
+@import "type";
 @import "layout";
-@import "header";
+@import "code";
 @import "syntax";

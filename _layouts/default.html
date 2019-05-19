@@ -5,28 +5,42 @@ layout: compress
 <html>
   {% seo %}
   {% include head.html %}
-  <body>
+  <body class="w-100">
     {% include header.html %}
-    <main>
-      <article class="content">
-        {{ content }}
-      </article>
-      {% include footer.html %}
+    <main class="bt b--black-10">
+      <div class="w-100 ph3 ph5-ns pb3 pb4-ns">
+        <div class="mw7 center">
+          {{ content }}
+        </div>
+      </div>
     </main>
+    {% include footer.html %}
+
+    {% if page.mathjax %}
+      <!-- MathJax support -->
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+      <!-- enable automatic line breaking -->
+      <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+      CommonHTML: { linebreaks: { automatic: true } },
+      "HTML-CSS": { linebreaks: { automatic: true } },
+             SVG: { linebreaks: { automatic: true } }
+    });
+      </script>
+    {% endif %}
+
+    {% if site.analytics_id %}
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics_id }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '{{ site.analytics_id }}');
+      </script>
+    {% endif %}
   </body>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
   {% feed_meta %}
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics_id }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', '{{ site.analytics_id }}');
-  </script>
-
-  {% if page.mathjax %}
-    <!-- MathJax support -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
-  {% endif %}
 </html>

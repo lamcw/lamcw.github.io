@@ -3,22 +3,13 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>
-    {% if page.title %}
-      {{ page.title }} | {{ site.title }}
-    {% else %}
-      {{ site.title }}
-    {% endif %}
-  </title>
+  <!-- fonts -->
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+TC">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-  {% if page.description %}
-    <meta name="description" content="{{ page.description }}">
-  {% else if site.description %}
-    <meta name="description" content="{{ site.description }}">
-  {% endif %}
-
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | prepend: site.url }}">
+
   <link rel="alternate" type="application/rss+xml" title="Thomas Lam" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
   <!-- icons -->

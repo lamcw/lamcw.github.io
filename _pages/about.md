@@ -10,7 +10,7 @@ permalink: /about/
 * Linux enthusiast
 * heavy [Neovim](https://neovim.io/) user, my setup is hosted on [Github](https://github.com/lamcw/dotfiles/tree/master/nvim)
 * dog lover(shiba <3)
-* casual basketball player
+* casual basketball & snooker player
 * film photographer. Olympus OM-1 is my go-to camera
 
 ## About this website

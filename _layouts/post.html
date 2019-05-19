@@ -1,23 +1,10 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}{% if page.author %}<span class="post-author">@{{ page.author }}</span>{% endif %}</h1>
 
-<time>{{ page.date | date_to_string }}</time>
-
-{% assign words = content | number_of_words %}
-<div class="post-readtime">
-&middot; {% if words < 360 %}1 min{% else %}{{ words | divided_by: 180 }} mins{% endif %} read
-</div>
-
-{% if page.categories %}
-  <div class="post-categories">
-    {% for category in page.categories %}
-      <a href="/categories/#{{ category | slugify }}">#{{ category }}</a>
-      {% comment %} print comma {% endcomment %}
-      {% unless forloop.last %},{% endunless %}
-    {% endfor %}
+<article>
+  {% include post-meta.html post=page bigtitle=true show_author=true %}
+  <div class="mt4">
+    {{ content }}
   </div>
-{% endif %}
-
-{{ content }}
+</article>

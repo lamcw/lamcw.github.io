@@ -1,0 +1,25 @@
+// Typography
+
+h1 {
+  letter-spacing: -0.02em;
+}
+
+p, ul, ol, pre, blockquote, hr {
+  @extend .lh-copy;
+}
+
+code, pre, tt {
+  @extend .f6;
+  font-family: $mono-font-style;
+}
+
+hr {
+  @extend .bg-light-gray;
+  height: 1px;
+  border: none;
+}
+
+blockquote {
+  @extend .bl, .bw2, .b--light-gray, .gray, .pl3;
+  text-rendering: optimizeLegibility;
+}

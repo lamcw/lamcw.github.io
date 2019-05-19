@@ -1,0 +1,27 @@
+table {
+  .highlight td {
+    padding: 5px;
+  }
+  .highlight pre {
+    margin: 0;
+  }
+}
+
+main {
+  div.highlight {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  code.highlighter-rouge, tt {
+    @extend div, .highlight;
+    padding: 3px 5px;
+  }
+
+  pre {
+    line-height: 1.25;
+    overflow-x: auto;
+    padding: 16px;
+    border: 1px solid $dark;
+    border-radius: 3px;
+  }
+}
