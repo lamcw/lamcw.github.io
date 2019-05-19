@@ -23,3 +23,7 @@ blockquote {
   @extend .bl, .bw2, .b--light-gray, .gray, .pl3;
   text-rendering: optimizeLegibility;
 }
+
+small {
+  @extend .f6, .measure;
+}
