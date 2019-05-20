@@ -54,7 +54,7 @@ table {
   @extend .collapse, .ba, .br2, .b--black-10, .pv2, .ph3;
 }
 
-tr {
+tbody, thead {
   @extend .striped--near-white;
 }
 
