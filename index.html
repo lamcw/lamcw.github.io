@@ -11,18 +11,26 @@ layout: default
 </ul>
 
 <!-- Pagination links -->
+{% if paginator.total_pages > 1 %}
 <div class="flex items-center justify-between">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}">
+    <a href="{{ paginator.previous_page_path | relative_url }}">
       <i class="v-mid material-icons">arrow_left</i>Previous
     </a>
+  {% else %}
+    <span class="black-30"><i class="v-mid material-icons">arrow_left</i>Previous</span>
   {% endif %}
-  <span class="page-number">
+
+  <span class="gray">
     Page: {{ paginator.page }} of {{ paginator.total_pages }}
   </span>
+
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}">
+    <a href="{{ paginator.next_page_path | relative_url }}">
       Next<i class="v-mid material-icons">arrow_right</i>
     </a>
+  {% else %}
+    <span class="black-30">Next<i class="v-mid material-icons">arrow_right</i></span>
   {% endif %}
 </div>
+{% endif %}

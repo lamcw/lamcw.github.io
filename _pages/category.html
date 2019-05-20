@@ -11,7 +11,7 @@ title: Categories
       {% capture category_name %}{{ category | first }}{% endcapture %}
       <div id="#{{ category_name | slugify }}"></div>
       <br />
-      <h4 class="fw5 black-70">#{{ category_name }}</h4>
+      <h4 class="fw5 mid-gray">#{{ category_name }}</h4>
       <a name="{{ category_name | slugify }}"></a>
       <ul class="list pl0">
         {% for post in site.categories[category_name] %}
