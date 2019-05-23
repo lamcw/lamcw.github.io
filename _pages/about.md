@@ -14,7 +14,17 @@ permalink: /about/
 * film photographer. Olympus OM-1 is my go-to camera
 
 ## Find me on...
-* [GitHub](https://www.github.com/{{ site.github_username }})
-* [Twitter](https://www.twitter.com/{{ site.twitter.username }})
-* [LinkedIn](https://www.linkedin.com/in/thomaslamcw/)
-* [Email](mailto:{{ site.email }})
+<div class="flex flex-column flex-row-ns items-center-ns justify-between">
+  <a class="w-25" href="https://www.github.com/lamcw">
+    <i class="fab fa-github ph1"></i>GitHub
+  </a>
+  <a class="w-25" href="https://www.twitter.com/lamcw">
+    <i class="fab fa-twitter ph1"></i>Twitter
+  </a>
+  <a class="w-25" href="https://www.linkedin.com/in/thomaslamcw/">
+    <i class="fab fa-linkedin ph1"></i>LinkedIn
+  </a>
+  <a class="w-25" href="mailto:thomas@lamcw.com">
+    <i class="fas fa-envelope ph1"></i>Email
+  </a>
+</div>
