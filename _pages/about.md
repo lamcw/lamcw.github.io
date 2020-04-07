@@ -28,3 +28,5 @@ permalink: /about/
     <i class="fas fa-envelope ph1"></i>Email
   </a>
 </div>
+
+Get my resume [here](https://github.com/lamcw/resume/releases/latest/download/resume.pdf).
