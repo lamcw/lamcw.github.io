@@ -29,6 +29,12 @@ img {
   vertical-align: bottom;
 }
 
+img.emoji {
+  display: inline;
+  margin: 0;
+  vertical-align: text-top;
+}
+
 sup {
   font-feature-settings: "sups" 1;
 }
