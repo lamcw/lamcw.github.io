@@ -1,13 +1,7 @@
 {% if page.mathjax %}
   <!-- MathJax support -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
-  <!-- enable automatic line breaking -->
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        CommonHTML: { linebreaks: { automatic: true } },
-        "HTML-CSS": { linebreaks: { automatic: true } },
-               SVG: { linebreaks: { automatic: true } }
-    });
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
 {% endif %}
 
