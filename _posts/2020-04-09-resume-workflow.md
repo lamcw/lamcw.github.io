@@ -3,7 +3,7 @@ layout: post
 title: "My Resume Workflow"
 categories:
 - DevOps
-- LaTex
+- LaTeX
 mathjax: true
 ---
 
